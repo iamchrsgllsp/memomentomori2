@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='style/test.css')}}">
+<meta http-equiv="refresh" content="5">
+</head>
+
+<title>wegotfight</title>
+
+
+
+
+<body>
+    <div class="header">
+    <h1>Tester Page</h1>
+    <p>Just building this out as a test page atm</p>
+    <p>Why isnt CSS Working</p>
+    </div>
+    <p>Adding more stuff in</p>
+    {% for l in images %}
+    <img src="{{l}}">
+    {% endfor %}
+    <form method="POST">
+        <label name="name">Name</label>
+        <input name="name"></input>
+        <label name="pwd">Password</label>
+        <input name="pwd"></input>
+        <input type="submit">
+    </form>
+</body>
+

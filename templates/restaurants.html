@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/test.css')}}">
+    <script src="{{url_for('static', filename='javascript/restaurant.js')}}"></script>
+
+</head>
+
+<title>Restaurants</title>
+
+
+
+
+<body>
+    <div class="menu" id="menu">
+        <div class="header" id="header">
+            <a href="/">
+                <p>HOME</p>
+            </a>
+            <a href="/test">
+                <p>About</p>
+            </a>
+            <a href="/test">
+                <p>Posts</p>
+            </a>
+        </div>
+        <button onclick="hamburger()"><img class="icon" id="hamburger"
+                src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
+    </div>
+    <h1>Restaurant</h1>
+    <div class="selected" id="selected">
+            
+    </div>
+    
+   
+    
+
+
+
+</body>
+<script type="text/javascript">
+    const restaurant = {{ restaurants|tojson|safe }}
+    getRestaurant(restaurant);
+  </script>

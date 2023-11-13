@@ -1,0 +1,32 @@
+body{
+    background-color: ghostwhite;
+}
+.menu{
+    border-radius: 25px;
+    display:inline-flex;
+    justify-content: space-around;
+    margin:5px;
+    width:98vw;
+    height:55px;
+}
+.header{
+    border-radius: 25px;
+    background-color: goldenrod;
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    height:auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+}
+
+img{
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+}
