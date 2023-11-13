@@ -29,16 +29,23 @@
     </div>
     <h1>Restaurant</h1>
     <div class="selected" id="selected">
-            
+
     </div>
-    
-   
-    
+
+
+
 
 
 
 </body>
 <script type="text/javascript">
-    const restaurant = {{ restaurants|tojson|safe }}
+    const restaurant = {{ restaurants| tojson | safe }}
     getRestaurant(restaurant);
-  </script>
+    document.getElementById("accept").addEventListener("click",acceptedRestaurant());
+    
+
+    
+
+
+
+</script>

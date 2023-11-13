@@ -18,12 +18,17 @@ function getRestaurant(restaurant) {
     console.log(leng);
     var index = Math.floor(Math.random() * leng); // Removed -1 and +1 to include the last element
     var selectedRestaurant = restaurant[index];
+    var accept1 = selectedRestaurant['Name']
     
     res.innerHTML = `
         <div class="restaurant" id="restaurant">
-            <p>${selectedRestaurant['Name']}</p>
+            <p id="sr">${selectedRestaurant['Name']}</p>
             <img src="${selectedRestaurant['LogoUrl']}"><br><br>
             <button><a href="">Decline</a></button>
-            <button><a href="${selectedRestaurant['Url']}">Accept</a></button>
+            <button id="accept">Accept</button>
         </div>`;
+}
+function acceptedRestaurant() {
+    
+    console.log("valu")
 }
