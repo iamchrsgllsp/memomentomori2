@@ -5,15 +5,22 @@ from flask import (
     url_for,
     request,
     redirect,
+    session
 )
 import os
 import requests
 import json
+import match
+import uuid
+from invitecodes import codes
 
 app = Flask(__name__, static_folder="static")
 
+@app.route('/')
+def index():
+   return render_template("index.html")
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/find", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
         postcode = request.form["postcode"]
@@ -41,6 +48,10 @@ def found(postcode):
 def about():
     return "about"
 
+@app.route('/match',methods=["GET", "POST"])
+def matcher():
+    data = match.matcher(1)
+    return render_template('found.html', data=data)
 
 @app.route("/test", methods=["GET", "POST"])
 def test():
@@ -51,6 +62,32 @@ def test():
             "https://mediaproxy.salon.com/width/1200/https://media.salon.com/2021/06/loki-still02.jpg"
         ]
         return render_template("test.html", images=link)
+    
+@app.route('/invite', methods=['GET', 'POST'])
+def inviter():
+  if request.method == "POST":
+    email = request.form['email']
+    print(email)
+    geninvite = uuid.uuid4()
+    with open("test.txt", "w") as f:
+      f.write(str(geninvite))
+      codes.append({"userid": 1, "email": email, "invitecode": str(geninvite)})
+    return f"Email has been sent to {email}<br>User can click: <a href='http://127.0.0.1:5000/invited/{geninvite}'>here</a> to join the meetin"
+  else:
+    return render_template("invite.html")
+
+
+@app.route('/invited/<invitecode>', methods=["GET", "POST"])
+def invited(invitecode):
+  data = ""
+  if request.method == "POST":
+    email = request.form['email']
+    for i in codes:
+      if i['email'] == email:
+        data = "success"
+    return data
+  else:
+    return render_template("invitecode.html")
 
 
 @app.route("/favicon.ico")

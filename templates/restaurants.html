@@ -3,7 +3,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/test.css')}}">
     <script src="{{url_for('static', filename='javascript/restaurant.js')}}"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <title>Restaurants</title>
@@ -41,10 +43,10 @@
 <script type="text/javascript">
     const restaurant = {{ restaurants| tojson | safe }}
     getRestaurant(restaurant);
-    document.getElementById("accept").addEventListener("click",acceptedRestaurant());
-    
 
-    
+
+
+
 
 
 

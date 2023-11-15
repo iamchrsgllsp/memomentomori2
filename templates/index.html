@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/index.css')}}">
+    <script src="{{url_for('static', filename='javascript/home.js')}}"></script>
+
+</head>
+
+<title>wegotfight</title>
+
+
+
+
+<body>
+    <div class="menu" id="menu">
+        <div class="header" id="header">
+            <a href="/"><p>HOME</p></a>
+            <a href="/test"><p>About</p></a>
+            <a href="/test"><p>Posts</p></a>
+        </div>
+        <button onclick="hamburger()"><img class="icon" id="hamburger"
+                src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
+    </div>
+    <div id="content">
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2022/03/17/Illustration-Graphic-of-Burger-Icon-Graphics-27360358-1-1-580x387.jpg">
+        <h2>GRUMBLE</h2>
+        <button class="btn">Login</button>
+        <button class="btn">Signup</button>
+    </div>
+    
+</body>
