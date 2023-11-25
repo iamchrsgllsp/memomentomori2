@@ -1,5 +1,6 @@
 body{
     background-color: ghostwhite;
+  font-family: 'Poppins', sans-serif;
 }
 .menu{
     border-radius: 25px;
@@ -56,9 +57,48 @@ img{
     border-radius: 4px;
     cursor: pointer;
     margin: 5px;
+    height: 50px;
+  width: 150px;
 }
 
 .btn:hover {
     background-color: darkviolet;
 }
 
+.inputter{
+  height:50px;
+  border: none;
+  background-color:ghostwhite;
+  border-radius:5px;
+}
+
+.about{
+  background-color:lightgoldenrodyellow;
+  border-radius:5px;
+  padding:10px;
+  text-align:center;
+}
+
+h1{
+  font-size:5em;
+}
+
+.pricing{
+  display:grid;
+  grid-template-columns: auto auto;
+}
+
+.pricing-item1{
+  background-color: darkviolet;
+  border-radius:25px;
+  padding:10px;
+}
+.pricing-item2{background-color:violet;border-radius:25px;padding:10px;}
+
+.pricing-item1:hover{
+  background-color: lightpink;
+}
+
+.pricing-item2:hover{
+  background-color: darkblue;
+}

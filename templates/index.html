@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/index.css')}}">
     <script src="{{url_for('static', filename='javascript/home.js')}}"></script>
 
 </head>
 
-<title>wegotfight</title>
+<title>grumble</title>
 
 
 
@@ -15,8 +18,8 @@
     <div class="menu" id="menu">
         <div class="header" id="header">
             <a href="/"><p>HOME</p></a>
-            <a href="/test"><p>About</p></a>
-            <a href="/test"><p>Posts</p></a>
+            <a href="/about"><p>About</p></a>
+            <a href="/eatin"><p>Eat Local</p></a>
         </div>
         
         <button onclick="hamburger()"><img class="icon" id="hamburger"
@@ -24,9 +27,14 @@
     </div>
     <div id="content">
         <img src="https://www.creativefabrica.com/wp-content/uploads/2022/03/17/Illustration-Graphic-of-Burger-Icon-Graphics-27360358-1-1-580x387.jpg">
-        <h2>GRUMBLE</h2>
-        <button class="btn">Login</button>
-        <button class="btn">Signup</button>
+        <h1>GRUMBLE</h1>
+      <h3>Stop those food choices arguments</h3>
+      <a href="/login"><button class="btn" id="loginbtn">Login</button></a>
+      <a href="/signup"><button class="btn" id="signupbtn">Signup</button></a>
     </div>
-    
+  <p>Become a Grumble Local Partner</p>
+  <button class="btn" id="restbtn">Restaurant Sign-Up</button>
+    <p>Test Functions:</p>
+  <a href='/found/bt668bl'>Test Postcode BT668BL</a>
+  <a href='/match'>Match</a>
 </body>

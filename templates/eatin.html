@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/eatin.css')}}">
+    <script src="{{url_for('static', filename='javascript/restaurant.js')}}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<title>Restaurants</title>
+
+
+
+
+<body>
+    <div class="menu" id="menu">
+        <div class="header" id="header">
+            <a href="/">
+                <p>HOME</p>
+            </a>
+            <a href="/test">
+                <p>About</p>
+            </a>
+            <a href="/test">
+                <p>Posts</p>
+            </a>
+        </div>
+        <button onclick="hamburger()"><img class="icon" id="hamburger"
+                src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
+    </div>
+    <h1>Local Restaurants</h1>
+    <div class="featured" id="featured">
+      
+<p>Featured restaurant of the week</p>
+      <div class="fr" id="fr">
+      <img src="{{featured[0]['featuredimage']}}">
+      <h2>{{featured[0]['name']}}</h2><h2>{{featured[0]['location']}}</h2></div><br>
+      Book now for {{featured[0]['featdisc']}}% discount
+    </div>
+  <div class="eatinselect" id="eatinselect">
+    {% for r in added %}
+    <div class="rloop" id="rloop">
+    <p>{{r['name']}}</p>
+    <p>{{r['location']}}</p>
+      <p>{{r['description']}}</p>
+    </div>
+    <br>
+    {% endfor %}
+  </div>
+
+
+
+
+
+
+</body>

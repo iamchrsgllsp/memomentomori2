@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/index.css')}}">
+    <script src="{{url_for('static', filename='javascript/home.js')}}"></script>
+
+</head>
+
+<title>become a partner</title>
+<style>
+  #rest{
+    background-color:blue;
+  }
+</style>
+<body>
+  <div class="menu" id="menu">
+  <div class="header" id="header">
+      <a href="/"><p>HOME</p></a>
+      <a href="/test"><p>About</p></a>
+      <a href="/test"><p>Posts</p></a>
+  </div><button onclick="hamburger()"><img class="icon" id="hamburger"
+              src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
+  </div>
+  <div id="content">
+    <img src="https://media.giphy.com/media/fz8R984KWKkCc/giphy.gif">
+    <p>Become a grumble restaurant</p>
+    <p>Join the food fight club</p>
+    <form method="POST">
+      <input type="text" placeholder="enter email address" name="email" class="inputter" id="inputter">
+      <input type="submit" value="Submit" class="btn">  
+    </form> <br>Fill in contact details and one of our team will be in touch<br>Or contact us on telnum<br>
+  <H2>Intro Offer Sign Up for 6months of FREE PLUS MEMBERSHIP</H2>
+  </div>
+    <div id="pricing" class="pricing">
+      <div class="pricing-item1">
+        Plus - £20 per month
+        <ul>
+          <li>Take orders</li>
+          <li>Calendar Integration for booking</li>
+          <li>1 menu on storage</li>
+          <li>Comments and Reviews</li>
+          <li>Promotions</li>
+        </ul>
+      </div>
+      <div class="pricing-item2">
+        Premium - £50 per month
+      <ul>
+        <li>Take orders</li>
+        <li>Calendar Integration for booking</li>
+        <li>Comments and Reviews</li>
+        <li>3 menus on storage</li>
+        <li>Take Payments through Stripe</li>
+        <li>1 FREE FEATURED spot, based on location and availability</li>
+      </ul>
+    </div>
+</body>

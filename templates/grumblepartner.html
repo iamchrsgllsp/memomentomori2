@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/index.css')}}">
+    <script src="{{url_for('static', filename='javascript/home.js')}}"></script>
+
+</head>
+
+<title>{{data['name']}} details</title>
+<style>
+  #rest{
+    background-color:blue;
+  }
+</style>
+<body>
+  <div class="menu" id="menu">
+  <div class="header" id="header">
+      <a href="/"><p>HOME</p></a>
+      <a href="/test"><p>About</p></a>
+      <a href="/test"><p>Posts</p></a>
+  </div><button onclick="hamburger()"><img class="icon" id="hamburger"
+              src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
+  </div>
+  <div id="content">
+    <h1>Hi {{data['name']}} admin</h1>
+    <p>This area will show restaurant details and allow them control certain details such as booking, discount rates, view rating and comments</p></div>
+  <div id="dashboard" class="dashboard">
+  <ul>
+    <li>Orders</li>
+    <li>Promotions</li>
+    <li>Get Featured</li>
+    <li>Reviews and Comments</li>
+    
+  </ul>
+  </div>
+
+</body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/index.css')}}">
+    <script src="{{url_for('static', filename='javascript/home.js')}}"></script>
+
+</head>
+
+<title>grumble</title>
+
+
+
+
+<body>
+    <div class="menu" id="menu">
+        <div class="header" id="header">
+            <a href="/"><p>HOME</p></a>
+            <a href="/about"><p>About</p></a>
+            <a href="/eatin"><p>Eat Local</p></a>
+        </div>
+        
+        <button onclick="hamburger()"><img class="icon" id="hamburger"
+                src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
+    </div>
+    <div id="content">
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2022/03/17/Illustration-Graphic-of-Burger-Icon-Graphics-27360358-1-1-580x387.jpg">
+        <h2>GRUMBLE</h2>
+      <h3>Stop those food choices arguments</h3>
+    </div>
+  <div id="about" class="about">
+    <p>Tired of arguing over where to order food</p>
+    <p>Welcome to Grumble - the best restaurant matching service in town! Stop arguing over where to eat and let Grumble gamify the experience of picking food with a partner or as a group. Match available delivery options, find local restaurants, and get sweet discounts along the way. Join Grumble today and keep those food choices arguments at bay!</p>
+  </div>
+</body>

@@ -34,6 +34,17 @@ img {
     border-radius: 50%;
 }
 
+.featured img{
+  height:50px;
+  width:50px;
+}
+
+.rloop{
+  background-color:ghostwhite;
+  border-radius:25px;
+  padding:5px;
+}
+
 .restaurant {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -78,6 +89,14 @@ a{
     display: none;
 
 }
+.featured {
+  background-color:lightgoldenrodyellow;
+}
+
+.eatinselect{
+  
+  background-color:goldenrod;
+}
 
 .selected button {
     background-color: goldenrod;
@@ -95,4 +114,7 @@ a{
     background-color: darkgoldenrod;
     transform: scale(1.05); /* Add a slight scale effect on hover for interaction */
 }
-
+.fr{
+  display:inline-flex;
+  justify-content:space-between;
+}

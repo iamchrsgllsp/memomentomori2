@@ -1,0 +1,130 @@
+body {
+    background-color: ghostwhite;
+    font-family: 'Poppins', sans-serif;
+    width:100wv;
+}
+
+.menu {
+    border-radius: 25px;
+    display: inline-flex;
+    justify-content: space-around;
+    margin: 5px;
+    width: 98vw;
+    height: 55px;
+}
+
+.header {
+    border-radius: 25px;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.featured img{
+  height:50px;
+  width:50px;
+}
+
+.rloop{
+  background-color:ghostwhite;
+  border-radius:25px;
+  padding:5px;
+}
+
+.restaurant {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 100%;
+    margin: 10px;
+    height: 50vh;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .restaurant {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .restaurant {
+        width: calc(33.33% - 20px);
+    }
+}
+
+.restaurant:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+}
+
+#rid{
+    display: none;
+
+}
+.featured {
+  background-color:goldenrod;
+  
+}
+
+.eatinselect{
+
+  background-color:goldenrod;
+}
+
+.selected button {
+    background-color: goldenrod;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px 20px; /* Add padding for better spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for elevation */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for transform */
+}
+
+.selected button:hover {
+    background-color: darkgoldenrod;
+    transform: scale(1.05); /* Add a slight scale effect on hover for interaction */
+}
+.fr{
+  display:inline-flex;
+  justify-content:space-around;
+}
+
+.fr img{
+  height:200px;
+  width:200px;
+}
+
+.featured:hover{background-color:lightgoldenrodyellow};}
+
