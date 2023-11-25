@@ -4,7 +4,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/home.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/index.css')}}">
     <script src="{{url_for('static', filename='javascript/home.js')}}"></script>
 
 </head>
@@ -30,5 +30,5 @@
         <input name="postcode"></input>
         <input type="submit">
     </form>
-    <a href="/logout"><button>Logout</button></a>
+    <a href="/logout"><button class="btn" id="loginbtn">Logout</button></a>
 </body>

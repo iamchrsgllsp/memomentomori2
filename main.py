@@ -20,6 +20,7 @@ import login
 app = Flask(__name__, static_folder="static")
 app.secret_key = "test"
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -32,7 +33,7 @@ def home():
         return redirect(f"/found/{postcode}")
     else:
         if session:
-            return render_template("home.html",user=session['user'])
+            return render_template("home.html", user=session["user"])
         else:
             return redirect("/")
 
@@ -123,18 +124,20 @@ def favicon():
 @app.route("/login", methods=["GET", "POST"])
 def loginform():
     if request.method == "POST":
-        data = login.sign_user_in(request.form['email'],request.form['password'])
+        data = login.sign_user_in(request.form["email"], request.form["password"])
         if data != False:
-          session['user'] = data['data']
-          return redirect(url_for("home"))
+            session["user"] = data["data"]
+            return redirect(url_for("home"))
         else:
             return redirect(url_for("loginform"))
     else:
         return render_template("login.html")
-  
-@app.route('/logout')
+
+
+@app.route("/logout")
 def logout():
-    return redirect(url_for('index'))
+    session.clear()
+    return redirect(url_for("index"))
 
 
 @app.route("/signup", methods=["GET", "POST"])
@@ -142,9 +145,11 @@ def signupform():
     if request.method == "POST":
         user = login.check_user(request.form["email"])
         if user:
-            new = login.add_user(request.form["email"], request.form["password"],request.form['display'])
+            new = login.add_user(
+                request.form["email"], request.form["password"], request.form["display"]
+            )
             if new:
-                session['user'] = request.form['display']
+                session["user"] = request.form["display"]
                 return redirect(url_for("home"))
             else:
                 return redirect(url_for("signupform"))
