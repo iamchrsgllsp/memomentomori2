@@ -24,10 +24,11 @@
         <button onclick="hamburger()"><img class="icon" id="hamburger"
                 src="{{url_for('static', filename='images/round_hamburger_menu_burger_icon_132782.svg')}}"></button>
     </div>
+    Welcome {{user}}
     <form method="POST">
         <label name="postcode">Postcode</label>
         <input name="postcode"></input>
         <input type="submit">
     </form>
-
+    <a href="/logout"><button>Logout</button></a>
 </body>
